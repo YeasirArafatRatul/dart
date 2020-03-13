@@ -54,7 +54,6 @@ for RAW string you have to write like this
 
 // ---------TYPE CONVERSION---------- //
 // if Type Conversion Fails It Will Throw Format Exception
-
   var one = int.parse('1');
   assert(one == 1);
   var onePointOne = double.parse('1.1');
@@ -65,6 +64,17 @@ for RAW string you have to write like this
 
   String piAsString = 3.1416.toStringAsFixed(2);
   assert(piAsString == '3.14');
-}
 
-// ---------FUNCTION---------- //
+// ---------OPERATORS---------- //
+
+//unary
+  var num2 = 1;
+  num2++;
+  print(num2);
+  ++num2;
+  print(num2);
+  num2 += 1;
+  print(num2);
+  num2 -= 1;
+  print(num2);
+}
