@@ -1,6 +1,6 @@
 // DART is an Object Oriented Programming Language and everything is an object
 
-// ---------COMMENTS---------- //
+/// ---------COMMENTS---------- ///
 
 // comments in -line
 
@@ -10,13 +10,9 @@ block comment
 
 /// documentation
 
-// ---------DATA TYPES---------- //
+/// ---------DATA TYPES---------- ///
 /* 
-int
-double
-String
-bool
-dynamic
+int,double,String,bool,dynamic
 */
 main() {
   int integer = 100;
@@ -32,7 +28,6 @@ main() {
   print(weakVariable);
 
 /* to define a CONSTANT use key word const*/
-
   const a = 3; //int constant
   const b = 3.4; // double constant
   const str = 'RATUL'; // string constant
@@ -44,15 +39,18 @@ main() {
   int num;
   print(num); //will be null
 
-// ---------STRING---------- //
+  //another way
+  final variable = 3;
+  print(variable.runtimeType);
+
+  /// ---------STRING---------- ///
 
 /* same as python 
 for RAW string you have to write like this
-
 */
   var s = r'In a raw string, nob even \n gets special treatment';
 
-// ---------TYPE CONVERSION---------- //
+  /// ---------TYPE CONVERSION---------- ///
 // if Type Conversion Fails It Will Throw Format Exception
   var one = int.parse('1');
   assert(one == 1);
@@ -65,7 +63,10 @@ for RAW string you have to write like this
   String piAsString = 3.1416.toStringAsFixed(2);
   assert(piAsString == '3.14');
 
-// ---------OPERATORS---------- //
+  /// ---------OPERATORS---------- ///
+
+// binary
+/*same as other languages */
 
 //unary
   var num2 = 1;
@@ -77,4 +78,12 @@ for RAW string you have to write like this
   print(num2);
   num2 -= 1;
   print(num2);
+
+//ternary
+  int x = 81;
+  var result = x % 2 == 0 ? 'Even' : 'Odd';
+  print(result);
+  if (x is int) {
+    print('$x is integer');
+  }
 }
