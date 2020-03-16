@@ -4,7 +4,7 @@ dynamic add(var a, var b) {
   return a + b;
 }
 
-// function with named parameter
+// function with named parameter and by-default named parameters are optional as well
 dynamic div({var num1, var num2}) {
   return num1 / num2;
 }
@@ -22,6 +22,8 @@ void main() {
   list.forEach((item) {
     print(item);
   });
+
+  print(pow(3, 2));
 }
 
 // without return statement
@@ -39,3 +41,5 @@ void printf(item) {
 1.Positional
 2. Named
 */
+
+dynamic pow(var a, [var b] /*optional*/) => a * (b ?? 1);
